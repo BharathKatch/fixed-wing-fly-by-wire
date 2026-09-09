@@ -11,7 +11,6 @@ Custom flight controller developed for an experimental fixed-wing RC aircraft us
 - Elevon mixing
 - BNO085 IMU integration
 - 200 Hz flight-control loop
-- 50 Hz servo output
 - Buffered SD telemetry logging
 - Flight modes including passthrough and fly-by-wire
 
