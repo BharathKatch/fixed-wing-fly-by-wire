@@ -18,7 +18,16 @@ bool Telemetry::begin() {
     }
 
     // CSV header
-    const char* header = "time_us,gyro_x,gyro_y,gyro_z\n";
+    const char* header =
+    "time_us,"
+    "gyro_x,gyro_y,gyro_z,"
+    "gyro_fresh,"
+    "missed_log_slots,"
+    "stale_gyro_count,"
+    "buffer_write_count,"
+    "filesystem_flush_count,"
+    "sd_write_error_count\n";
+
     writeToBuffer(header, strlen(header));
 
     lastLogTime = micros();
@@ -59,7 +68,7 @@ bool Telemetry::createLogFile() {
 void Telemetry::update() {
 
     uint32_t now = micros();
-    
+
     uint32_t elapsed = now - lastLogTime;
 
     if (elapsed < LOG_PERIOD_US) {
@@ -83,7 +92,7 @@ void Telemetry::update() {
 
     Vector3 gyro = imu.getGyro();
 
-    char line[128];
+    char line[180];
 
     int length = snprintf(
         line,
@@ -100,7 +109,7 @@ void Telemetry::update() {
         filesystemFlushCount,
         sdWriteErrorCount
     );
-
+    
     if (length > 0) {
         writeToBuffer(line, length);
     }
@@ -138,7 +147,7 @@ void Telemetry::flushBuffer() {
 
     if (bytesWritten == bufferIndex) {
 
-        // Successful RAM buffer → SD write
+        // Successful RAM buffer -> SD write
         bufferWriteCount++;
         writesSinceFlush++;
 
