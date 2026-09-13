@@ -72,8 +72,7 @@ void setup() {
     // Start watchdog
     WDT_timings_t config;
 
-    config.timeout = 1;   // 1 second for initial testing
-
+    config.timeout = 0.5;   // 0.5 second
     wdt.begin(config);
 
     //Serial will be off in recovery mode
