@@ -21,7 +21,7 @@ Custom fly-by-wire flight controller designed, implemented, and flight-tested on
 ## Hardware
 
 <p align="center">
-  <img src="images/FlightControllerSchematic.pdf" width="700">
+  <img src="images/FlightControllerSchematic.png" width="700">
 </p>
 
 - Teensy 4.1
@@ -47,6 +47,10 @@ Pilot Input → Desired Angular Rate → Integrate Desired Attitude → Quaterni
 ## Flight Testing
 
 The aircraft has been successfully flown in passthrough mode. PID tuning of the Fly-By-Wire system is still in progress, however momentary control of the aircraft within FBW mode has been achieved.
+
+<p align="center">
+  <img src="images/IMG_6099.jpeg" width="700">
+</p>
 
 ## Other Notes
 
