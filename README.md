@@ -1,6 +1,8 @@
 # Fixed-Wing Fly-By-Wire Flight Controller
 
-
+<p align="center">
+  <img src="images/Aircraft_Hero_Shot.jpg" width="700">
+</p>
 
 Custom fly-by-wire flight controller designed, implemented, and flight-tested on an experimental fixed-wing RC aircraft using a Teensy 4.1 and BNO085 IMU. The system uses quaternion-based attitude control to translate pilot commands into stabilized elevon outputs at 200 Hz.
 
