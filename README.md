@@ -54,4 +54,4 @@ The aircraft has been successfully flown in passthrough mode. PID tuning of the 
 
 ## Other Notes
 
-A detailed engineering portfolio covering the system architecture, control implementation, hardware design, reliability features, and flight testing is available here:
+A detailed engineering portfolio covering the system architecture, control implementation, hardware design, reliability features, and flight testing is available here: https://github.com/BharathKatch/fixed-wing-fly-by-wire/blob/main/FBWTechnical.pdf
